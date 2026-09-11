@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #3b82f6;
+  --color-primary-dark: #1d4ed8;
+  --color-emerald-accent: #34d399;
+  --font-sans: "Inter", "Noto Sans SC", system-ui, sans-serif;
+  --font-heading: "Space Grotesk", "Inter", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.heading-font {
+  font-family: var(--font-heading);
+}
+
+.ai-gradient {
+  background: linear-gradient(90deg, #3b82f6, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-bg {
+  background: linear-gradient(135deg, #0f172a 0%, #020617 100%);
+}
+
+.card-hover {
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), 
+             box-shadow 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.3), 0 8px 10px -6px rgb(0 0 0 / 0.3);
+}
