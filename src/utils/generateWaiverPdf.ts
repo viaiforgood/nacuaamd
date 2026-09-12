@@ -393,7 +393,7 @@ export async function generateWaiverPdf(data: WaiverPdfData): Promise<Uint8Array
     color: rgb(0.2, 0.25, 0.3),
   });
 
-  currentPage.drawText(`Signed At: ${sanitizeAscii(data.signedTimestamp)} (${sanitizeAscii(data.timezone, "Local")})   |   Signed via nacuaanc.org/waiver/`, {
+  currentPage.drawText(`Signed At: ${sanitizeAscii(data.signedTimestamp)} (${sanitizeAscii(data.timezone, "Local")})   |   Signed via dc.nacuaa.ai/waiver/`, {
     x: margin + 6,
     y: y - 19,
     size: 7,

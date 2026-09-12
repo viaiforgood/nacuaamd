@@ -46,8 +46,8 @@ function buildMultipartMime(config: SmtpConfig, message: EmailMessage): string {
   const boundary = `----=_Part_${Date.now()}_${Math.random().toString(36).substring(2)}`;
   const recipients = (Array.isArray(config.to) ? config.to : [config.to]).filter(Boolean);
   const now = new Date();
-  const domain = config.from.includes('@') ? config.from.split('@').pop()?.replace(/[^a-zA-Z0-9.-]/g, '') : 'nacuaanc.org';
-  const messageId = `<${Date.now()}.${Math.random().toString(36).substring(2)}@${domain || 'nacuaanc.org'}>`;
+  const domain = config.from.includes('@') ? config.from.split('@').pop()?.replace(/[^a-zA-Z0-9.-]/g, '') : 'nacuaa.ai';
+  const messageId = `<${Date.now()}.${Math.random().toString(36).substring(2)}@${domain || 'nacuaa.ai'}>`;
 
   const headers = [
     `From: ${config.from}`,
@@ -190,13 +190,13 @@ export async function sendSmtpEmail(config: SmtpConfig, message: EmailMessage): 
     await session.readResponse([220]);
 
     // 2. EHLO
-    await session.command(`EHLO ${config.heloName || 'nacuaanc.org'}`, [250]);
+    await session.command(`EHLO ${config.heloName || 'dc.nacuaa.ai'}`, [250]);
 
     // 3. STARTTLS if on port 587
     if (!isTls && (port === 587 || config.secureTransport === 'starttls')) {
       await session.command('STARTTLS', [220]);
       await session.startTls();
-      await session.command(`EHLO ${config.heloName || 'nacuaanc.org'}`, [250]);
+      await session.command(`EHLO ${config.heloName || 'dc.nacuaa.ai'}`, [250]);
     }
 
     // 4. AUTH LOGIN

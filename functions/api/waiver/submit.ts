@@ -156,7 +156,7 @@ export const onRequestPost = async ({ request, env }: { request: Request; env: E
       }
     }
 
-    // 4. Send Email Notification with PDF Attachment (to Signer, Michael, and waiver@nacuaanc.org)
+    // 4. Send Email Notification with PDF Attachment (to Signer, Bin, and waiver@dc.nacuaa.ai)
     let emailSent = false;
     let emailMessage = "";
 
