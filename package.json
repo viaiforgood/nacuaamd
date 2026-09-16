@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "description": "North America Colleges and Universities Alumni Alliance, Washington DC Chapter (NACUAA DC) Website",
   "engines": {
-    "node": ">=22.12.0"
+    "node": ">=18.0.0"
   },
   "scripts": {
     "dev": "astro dev",
