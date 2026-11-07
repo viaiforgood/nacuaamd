@@ -1,15 +1,15 @@
-# NACUAA DC Website
+# NACUAA MD Website
 
-The official website for the **North America Colleges and Universities Alumni Alliance, Washington DC Chapter** (北美高校联盟华盛顿DC分会).
+The official website for the **North America Colleges and Universities Alumni Alliance, Maryland Chapter** (北美高校联盟马里兰分会).
 
-- 🌐 **Live Website**: [https://dc.nacuaa.ai](https://dc.nacuaa.ai)
+- 🌐 **Live Website**: [https://md.nacuaa.ai](https://md.nacuaa.ai)
 - 👤 **President**: 刘斌 (Bin Liu), `bin@nacuaa.ai`
 
 ## Tech Stack
 * **Framework**: Astro (v5)
 * **Styling**: Tailwind CSS (v4)
 * **Internationalization**: Custom lightweight i18n routing (`zh-CN`, `en`, `zh-TW`)
-* **Deployment**: Cloudflare Pages (`nacuaadc.pages.dev`)
+* **Deployment**: Cloudflare Pages (`nacuaamd.pages.dev`)
 
 ## Features
 * 🌐 **Full i18n Support**: Supports Simplified Chinese (`zh-CN`, default), English (`en`), and Traditional Chinese (`zh-TW`).
@@ -36,8 +36,8 @@ npm run build
 
 ## Cloudflare Pages Deployment
 Deployed via Cloudflare Pages:
-* **Project**: `nacuaadc`
-* **Custom Domain**: `dc.nacuaa.ai`
+* **Project**: `nacuaamd`
+* **Custom Domain**: `md.nacuaa.ai`
 * **Build Command**: `npm run build`
 * **Output Directory**: `dist`
 

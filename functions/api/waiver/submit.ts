@@ -44,13 +44,13 @@ export const onRequestPost = async ({ request, env }: { request: Request; env: E
     const id = data.submissionId || "ROL-" + Date.now().toString(36).toUpperCase() + "-" + Math.random().toString(36).substring(2, 6).toUpperCase();
     const clientIp = request.headers.get("CF-Connecting-IP") || request.headers.get("x-forwarded-for") || "127.0.0.1";
     const userAgent = request.headers.get("user-agent") || "Unknown Device";
-    const version = data.version || "NACUAADC-ROL-2026-09";
+    const version = data.version || "NACUAAMD-ROL-2026-09";
     const r2Key = `waivers/${new Date().toISOString().slice(0, 7)}/${id}.pdf`;
 
     const rawEmail = (data.email || data.phoneEmail || "").trim();
     const signerEmail = rawEmail.includes("@") ? rawEmail : "";
     const adminEmail = env.ADMIN_NOTIFY_EMAIL || "bin@nacuaa.ai";
-    const waiverOfficialEmail = "waiver@dc.nacuaa.ai";
+    const waiverOfficialEmail = "waiver@md.nacuaa.ai";
 
     // 1. Save PDF to R2 if available
     if (env.BUCKET && data.pdfBase64) {
@@ -156,7 +156,7 @@ export const onRequestPost = async ({ request, env }: { request: Request; env: E
       }
     }
 
-    // 4. Send Email Notification with PDF Attachment (to Signer, Bin, and waiver@dc.nacuaa.ai)
+    // 4. Send Email Notification with PDF Attachment (to Signer, Bin, and waiver@md.nacuaa.ai)
     let emailSent = false;
     let emailMessage = "";
 
@@ -164,12 +164,12 @@ export const onRequestPost = async ({ request, env }: { request: Request; env: E
 
     if (data.pdfBase64 && recipients.length > 0) {
       const cleanBase64 = data.pdfBase64.replace(/^data:application\/pdf;base64,/, "");
-      const emailSubject = `【活动免责签署回执】${data.activityName} - ${data.participantName} (NACUAA DC)`;
+      const emailSubject = `【活动免责签署回执】${data.activityName} - ${data.participantName} (NACUAA MD)`;
       const emailHtml = `
         <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e2e8f0; border-radius: 12px; background-color: #ffffff;">
           <div style="border-bottom: 2px solid #2563eb; padding-bottom: 12px; margin-bottom: 16px;">
-            <h2 style="color: #1e293b; margin: 0 0 6px 0; font-size: 20px;">NACUAA DC 活动免责与责任豁免签署回执</h2>
-            <p style="color: #64748b; margin: 0; font-size: 13px;">北美高校联盟华盛顿DC分会 (NACUAA DC) · Release of Liability</p>
+            <h2 style="color: #1e293b; margin: 0 0 6px 0; font-size: 20px;">NACUAA MD 活动免责与责任豁免签署回执</h2>
+            <p style="color: #64748b; margin: 0; font-size: 13px;">北美高校联盟马里兰分会 (NACUAA MD) · Release of Liability</p>
           </div>
           
           <p style="color: #334155; font-size: 14px; line-height: 1.6;">
@@ -191,8 +191,8 @@ export const onRequestPost = async ({ request, env }: { request: Request; env: E
 
           <p style="color: #64748b; font-size: 12px; line-height: 1.5; border-top: 1px solid #e2e8f0; padding-top: 12px; margin-top: 20px;">
             提示：本免责协议以英文正文为最终法律效力文本（English text controls and prevails）。请妥善保管邮件中的 PDF 附件。<br>
-            官方免责联络邮箱：<a href="mailto:waiver@dc.nacuaa.ai" style="color: #2563eb;">waiver@dc.nacuaa.ai</a><br>
-            北美高校联盟华盛顿DC分会 · <a href="https://dc.nacuaa.ai" style="color: #2563eb; text-decoration: none;">dc.nacuaa.ai</a>
+            官方免责联络邮箱：<a href="mailto:waiver@md.nacuaa.ai" style="color: #2563eb;">waiver@md.nacuaa.ai</a><br>
+            北美高校联盟马里兰分会 · <a href="https://md.nacuaa.ai" style="color: #2563eb; text-decoration: none;">md.nacuaa.ai</a>
           </p>
         </div>
       `;
@@ -200,7 +200,7 @@ export const onRequestPost = async ({ request, env }: { request: Request; env: E
       // A. Try Google Workspace SMTP first if credentials provided
       if (env.SMTP_USER && env.SMTP_PASS) {
         try {
-          const fromAddr = env.SMTP_FROM || `NACUAA DC Waivers <${env.SMTP_USER}>`;
+          const fromAddr = env.SMTP_FROM || `NACUAA MD Waivers <${env.SMTP_USER}>`;
           await sendSmtpEmail({
             host: env.SMTP_HOST || "smtp.gmail.com",
             port: Number(env.SMTP_PORT) || 465,
@@ -208,13 +208,13 @@ export const onRequestPost = async ({ request, env }: { request: Request; env: E
             password: env.SMTP_PASS,
             from: fromAddr,
             to: recipients,
-            replyTo: "waiver@dc.nacuaa.ai"
+            replyTo: "waiver@md.nacuaa.ai"
           }, {
             subject: emailSubject,
             html: emailHtml,
             attachments: [
               {
-                filename: `NACUAADC_Release_${id}.pdf`,
+                filename: `NACUAAMD_Release_${id}.pdf`,
                 contentBase64: cleanBase64,
                 contentType: "application/pdf"
               }
@@ -238,14 +238,14 @@ export const onRequestPost = async ({ request, env }: { request: Request; env: E
               "Content-Type": "application/json"
             },
             body: JSON.stringify({
-              from: "NACUAA DC Waivers <waiver@dc.nacuaa.ai>",
-              reply_to: "waiver@dc.nacuaa.ai",
+              from: "NACUAA MD Waivers <waiver@md.nacuaa.ai>",
+              reply_to: "waiver@md.nacuaa.ai",
               to: recipients,
               subject: emailSubject,
               html: emailHtml,
               attachments: [
                 {
-                  filename: `NACUAADC_Release_${id}.pdf`,
+                  filename: `NACUAAMD_Release_${id}.pdf`,
                   content: cleanBase64
                 }
               ]

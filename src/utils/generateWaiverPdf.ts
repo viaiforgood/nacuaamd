@@ -146,7 +146,7 @@ export async function generateWaiverPdf(data: WaiverPdfData): Promise<Uint8Array
   });
   y -= 15;
 
-  currentPage.drawText("Washington DC Chapter (NACUAA DC)", {
+  currentPage.drawText("Maryland Chapter (NACUAA MD)", {
     x: margin,
     y: y - 10,
     size: 10,
@@ -393,7 +393,7 @@ export async function generateWaiverPdf(data: WaiverPdfData): Promise<Uint8Array
     color: rgb(0.2, 0.25, 0.3),
   });
 
-  currentPage.drawText(`Signed At: ${sanitizeAscii(data.signedTimestamp)} (${sanitizeAscii(data.timezone, "Local")})   |   Signed via dc.nacuaa.ai/waiver/`, {
+  currentPage.drawText(`Signed At: ${sanitizeAscii(data.signedTimestamp)} (${sanitizeAscii(data.timezone, "Local")})   |   Signed via md.nacuaa.ai/waiver/`, {
     x: margin + 6,
     y: y - 19,
     size: 7,
@@ -405,7 +405,7 @@ export async function generateWaiverPdf(data: WaiverPdfData): Promise<Uint8Array
   const totalPages = pdfDoc.getPageCount();
   for (let i = 0; i < totalPages; i++) {
     const page = pdfDoc.getPage(i);
-    page.drawText(`Page ${i + 1} of ${totalPages}   -   NACUAA DC Release of Liability (${WAIVER_VERSION})   -   English Controls`, {
+    page.drawText(`Page ${i + 1} of ${totalPages}   -   NACUAA MD Release of Liability (${WAIVER_VERSION})   -   English Controls`, {
       x: margin,
       y: margin - 15,
       size: 7,

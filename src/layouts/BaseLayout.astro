@@ -15,7 +15,7 @@ interface Props {
 
 const { lang, title, description, path = '/' } = Astro.props;
 const t = useTranslations(lang);
-const pageTitle = title ? `${title} · ${t('site.title')}` : `${t('site.title')} · dc.nacuaa.ai`;
+const pageTitle = title ? `${title} · ${t('site.title')}` : `${t('site.title')} · md.nacuaa.ai`;
 const pageDescription = description ?? t('site.tagline');
 const alternates = getAlternateLinks(path);
 const isWaiverPage = path.includes('/waiver');
@@ -33,7 +33,7 @@ const isWaiverPage = path.includes('/waiver');
     <meta property="og:site_name" content={t('site.title')} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={pageDescription} />
-    <meta property="og:url" content={new URL(path, Astro.site ?? 'https://dc.nacuaa.ai').href} />
+    <meta property="og:url" content={new URL(path, Astro.site ?? 'https://md.nacuaa.ai').href} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={pageDescription} />
@@ -43,8 +43,8 @@ const isWaiverPage = path.includes('/waiver');
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="googlebot" content="index, follow" />
     <meta name="bingbot" content="index, follow" />
-    <meta name="geo.region" content="US-DC" />
-    <meta name="geo.placename" content="Washington, District of Columbia" />
+    <meta name="geo.region" content="US-MD" />
+    <meta name="geo.placename" content="Rockville, Maryland" />
     <meta name="geo.position" content="38.9072;-77.0369" />
     <meta name="ICBM" content="38.9072, -77.0369" />
 
@@ -54,15 +54,15 @@ const isWaiverPage = path.includes('/waiver');
       "@graph": [
         {
           "@type": "NGO",
-          "@id": "https://dc.nacuaa.ai/#organization",
-          "name": "北美高校联盟华盛顿DC分会",
-          "alternateName": ["NACUAA DC", "NACUAA Washington DC Chapter", "北美高校联盟大华府分会"],
-          "url": "https://dc.nacuaa.ai",
-          "logo": "https://dc.nacuaa.ai/images/logo.png",
-          "description": "北美高校联盟华盛顿DC分会（NACUAA DC）服务身处大华府（华盛顿特区、马里兰与弗吉尼亚）的中美高校校友，汇聚各界专家、创业领袖与校友同仁，开展学术讲座、公共政策、科技创新与文体联谊。",
+          "@id": "https://md.nacuaa.ai/#organization",
+          "name": "北美高校联盟马里兰分会",
+          "alternateName": ["NACUAA MD", "NACUAA Maryland Chapter", "北美高校联盟马里兰分会"],
+          "url": "https://md.nacuaa.ai",
+          "logo": "https://md.nacuaa.ai/images/logo.png",
+          "description": "北美高校联盟马里兰分会（NACUAA MD）服务身处马里兰州及大华府地区（马里兰、华盛顿特区与弗吉尼亚）的中美高校校友，汇聚各界专家、创业领袖与校友同仁，开展学术讲座、公共政策、科技创新与文体联谊。",
           "areaServed": {
             "@type": "AdministrativeArea",
-            "name": "Greater Washington DC, Washington D.C., Maryland, Virginia"
+            "name": "Maryland, Maryland & Greater DC, Virginia"
           },
           "founder": {
             "@type": "Person",
@@ -78,11 +78,11 @@ const isWaiverPage = path.includes('/waiver');
         },
         {
           "@type": "WebSite",
-          "@id": "https://dc.nacuaa.ai/#website",
-          "url": "https://dc.nacuaa.ai",
-          "name": "北美高校联盟华盛顿DC分会",
+          "@id": "https://md.nacuaa.ai/#website",
+          "url": "https://md.nacuaa.ai",
+          "name": "北美高校联盟马里兰分会",
           "publisher": {
-            "@id": "https://dc.nacuaa.ai/#organization"
+            "@id": "https://md.nacuaa.ai/#organization"
           }
         }
       ]
@@ -111,10 +111,10 @@ const isWaiverPage = path.includes('/waiver');
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     
-    <link rel="alternate" hreflang="zh-Hans" href={new URL(alternates['zh-CN'], Astro.site ?? 'https://dc.nacuaa.ai')} />
-    <link rel="alternate" hreflang="en" href={new URL(alternates.en, Astro.site ?? 'https://dc.nacuaa.ai')} />
-    <link rel="alternate" hreflang="zh-Hant" href={new URL(alternates['zh-TW'], Astro.site ?? 'https://dc.nacuaa.ai')} />
-    <link rel="alternate" hreflang="x-default" href={new URL(alternates['zh-CN'], Astro.site ?? 'https://dc.nacuaa.ai')} />
+    <link rel="alternate" hreflang="zh-Hans" href={new URL(alternates['zh-CN'], Astro.site ?? 'https://md.nacuaa.ai')} />
+    <link rel="alternate" hreflang="en" href={new URL(alternates.en, Astro.site ?? 'https://md.nacuaa.ai')} />
+    <link rel="alternate" hreflang="zh-Hant" href={new URL(alternates['zh-TW'], Astro.site ?? 'https://md.nacuaa.ai')} />
+    <link rel="alternate" hreflang="x-default" href={new URL(alternates['zh-CN'], Astro.site ?? 'https://md.nacuaa.ai')} />
     
     <title>{pageTitle}</title>
   </head>

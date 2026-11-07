@@ -5,7 +5,7 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
 <BaseLayout
   lang="zh-CN"
   title="免责协议管理后台 (Admin Console)"
-  description="北美高校联盟华盛顿DC分会（NACUAA DC）活动免责协议管理与归档调阅后台"
+  description="北美高校联盟马里兰分会（NACUAA MD）活动免责协议管理与归档调阅后台"
   path="/waiver/admin/"
 >
   <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 md:py-16 space-y-8">
@@ -13,13 +13,13 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-6">
       <div>
         <div class="text-xs text-blue-400 font-mono tracking-wider uppercase font-semibold">
-          NACUAA DC WAIVER ADMIN
+          NACUAA MD WAIVER ADMIN
         </div>
         <h1 class="text-2xl sm:text-3xl font-bold text-white tracking-tight heading-font mt-1">
           活动免责签署管理后台
         </h1>
         <p class="text-xs sm:text-sm text-slate-400 mt-1">
-          调阅、核验并归档各俱乐部活动免责协议（版本 NACUAADC-ROL-2026-09）
+          调阅、核验并归档各俱乐部活动免责协议（版本 NACUAAMD-ROL-2026-09）
         </p>
       </div>
 
@@ -102,7 +102,7 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
         </div>
 
         <div class="p-3 bg-slate-950/80 rounded-xl border border-slate-800/80 flex items-center justify-between text-xs font-mono text-slate-300 break-all">
-          <span id="preview-url">https://dc.nacuaa.ai/waiver/?club=run&activity=大华府追风健行</span>
+          <span id="preview-url">https://md.nacuaa.ai/waiver/?club=run&activity=大华府追风健行</span>
         </div>
       </div>
 
@@ -118,7 +118,7 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
         </div>
         <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-5">
           <div class="text-xs text-slate-400 font-medium">当前锁定规范版本</div>
-          <div class="text-xl font-bold text-blue-400 mt-1 font-mono">NACUAADC-ROL-2026-09</div>
+          <div class="text-xl font-bold text-blue-400 mt-1 font-mono">NACUAAMD-ROL-2026-09</div>
         </div>
       </div>
 
@@ -348,7 +348,7 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
       `"${w.phone_email || w.phoneEmail || ""}"`,
       `"${w.emergency_contact || w.emergencyContact || ""}"`,
       w.signer_ip || w.signerIp || "",
-      w.version || "NACUAADC-ROL-2026-09"
+      w.version || "NACUAAMD-ROL-2026-09"
     ]);
 
     const csvContent = "\uFEFF" + [headers.join(","), ...rows.map(r => r.join(","))].join("\n");
@@ -356,7 +356,7 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.href = url;
-    link.download = `NACUAADC_Waivers_List_${new Date().toISOString().slice(0, 10)}.csv`;
+    link.download = `NACUAAMD_Waivers_List_${new Date().toISOString().slice(0, 10)}.csv`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -382,7 +382,7 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
     const customName = genCustomClub?.value.trim() || "";
     const clubParam = isOther ? (customName || "other") : club;
     const act = genActivity.value.trim();
-    let url = `https://dc.nacuaa.ai/waiver/?club=${encodeURIComponent(clubParam)}`;
+    let url = `https://md.nacuaa.ai/waiver/?club=${encodeURIComponent(clubParam)}`;
     if (act) {
       url += `&activity=${encodeURIComponent(act)}`;
     }

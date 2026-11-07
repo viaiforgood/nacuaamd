@@ -6,11 +6,11 @@ export interface WaiverSection {
   textZh: string;
 }
 
-export const WAIVER_VERSION = "NACUAADC-ROL-2026-09";
+export const WAIVER_VERSION = "NACUAAMD-ROL-2026-09";
 
 export const WAIVER_HEADER = {
-  orgEn: "NORTH AMERICA CHINESE UNIVERSITY ALUMNI ALLIANCE\nWashington DC Chapter (NACUAA DC)",
-  orgZh: "北美高校联盟 · 华盛顿DC分会（NACUAA DC）",
+  orgEn: "NORTH AMERICA CHINESE UNIVERSITY ALUMNI ALLIANCE\nMaryland Chapter (NACUAA MD)",
+  orgZh: "北美高校联盟 · 马里兰分会（NACUAA MD）",
   titleEn: "RELEASE OF LIABILITY AGREEMENT",
   titleZh: "免责声明与责任豁免协议",
   langControlTitle: "LANGUAGE CONTROL  |  语言效力条款",
@@ -23,12 +23,12 @@ export const WAIVER_SECTIONS: WaiverSection[] = [
     num: "1",
     titleEn: "1. ACTIVITIES AND ASSOCIATED RISKS",
     titleZh: "一、活动及相应风险",
-    textEn: `The Activity is organized or co-organized by North America Chinese University Alumni Alliance ("NACUAA"), a nonprofit corporation organized and existing under the laws of the State of California, and/or its Washington DC Chapter ("NACUAA DC"), including any clubs, committees, or programs of the Chapter. NACUAA, NACUAA DC, and their officers, directors, members, volunteers, agents, and contractors are referred to in this Agreement as the "Organizers."
+    textEn: `The Activity is organized or co-organized by North America Chinese University Alumni Alliance ("NACUAA"), a nonprofit corporation organized and existing under the laws of the State of California, and/or its Maryland Chapter ("NACUAA MD"), including any clubs, committees, or programs of the Chapter. NACUAA, NACUAA MD, and their officers, directors, members, volunteers, agents, and contractors are referred to in this Agreement as the "Organizers."
 
 I understand that: the Activity may be hazardous, and I may be exposed to inherent dangers and hazards, including but not limited to some of the following (depending on the nature of the Activity): falls, falling rocks and objects, fractures, concussions, dangerous or unanticipated weather, overexertion, overheating, injuries from my lack of fitness or conditioning, unpredictable ocean and river currents, hypothermia, hostile or aggressive wildlife, venomous or disease-carrying animals or insects, communicable diseases, exposure to allergens which could cause life-threatening reactions, death, equipment failures, and negligence of others; as a consequence of these risks and other risks associated with the Activity that may not be listed here, I may be seriously ill, hurt, disabled or may die from the resulting injuries, and/or my property may also be damaged; hospital facilities, qualified medical care, and emergency medical evacuation may be delayed, limited, or unavailable. The Organizers assume no responsibility for providing medical care during the Activity, and I will have to pay for any medical care.
 
 In consideration of the permission to participate in the Activity, I agree to the terms contained in this document.`,
-    textZh: `本活动由北美高校联盟（North America Chinese University Alumni Alliance，简称“NACUAA”，一家依据加利福尼亚州法律组建并存续的非营利法人）和/或其华盛顿DC分会（Washington DC Chapter，简称“NACUAA DC”，包括该分会下属俱乐部、委员会或项目）组织或共同组织。NACUAA、NACUAA DC 及其管理人员、董事、成员、志愿者、代理人及承包商在本协议中合称“组织方”。
+    textZh: `本活动由北美高校联盟（North America Chinese University Alumni Alliance，简称“NACUAA”，一家依据加利福尼亚州法律组建并存续的非营利法人）和/或其马里兰分会（Maryland Chapter，简称“NACUAA MD”，包括该分会下属俱乐部、委员会或项目）组织或共同组织。NACUAA、NACUAA MD 及其管理人员、董事、成员、志愿者、代理人及承包商在本协议中合称“组织方”。
 
 本人理解：本活动可能具有危险性，本人可能面临固有危险与危害，包括但不限于下列情形（视活动性质而定）：跌倒、落石及坠落物、骨折、脑震荡、危险或突发天气、过度用力、中暑过热、因本人体能或训练不足造成的伤害、不可预测的海浪与河流水流、失温、具有敌意或攻击性的野生动物、带毒或传播疾病的动物或昆虫、传染病、可能引发危及生命反应的过敏原接触、死亡、设备故障，以及其他人的过失。由于上述风险以及本处可能未列明的、与本活动相关的其他风险，本人可能因此重病、受伤、残疾或死亡，和/或本人财产可能受损；医院设施、合格医疗护理及紧急医疗转运可能延迟、受限或无法获得。组织方不承担在本活动期间提供医疗护理的责任，任何医疗费用均由本人自行承担。
 
@@ -38,15 +38,15 @@ In consideration of the permission to participate in the Activity, I agree to th
     num: "2",
     titleEn: "2. ASSUMPTION OF THE RISKS",
     titleZh: "二、风险自担",
-    textEn: `I hereby freely assume the inherent risks as well as any other risks not listed that are part of the Activity, and any harm, injury, illness, or loss that may occur to me or my property as a result of my participation in the Activity or during any transportation to or from the Activity—including any injury, illness, or loss caused by the negligence of NACUAA, NACUAA DC, their officers, directors, members, volunteers, agents and contractors, and other Activity participants. I also understand that any equipment that I provide or may borrow or rent from the Organizers or any other provider I use at my own risk, and that any such equipment is provided without any warranty about its condition or suitability.`,
-    textZh: `本人在此自愿承担本活动所包含的固有风险以及未列明的其他风险，并承担因本人参加本活动或往返本活动的交通过程中可能对本人或本人财产造成的任何损害、伤害、疾病或损失——包括因 NACUAA、NACUAA DC、其管理人员、董事、成员、志愿者、代理人及承包商以及其他活动参加者的过失所造成的伤害、疾病或损失。本人亦理解：本人自行提供、向组织方或其他提供方借用或租用的任何设备，均由本人自行承担风险使用，且该等设备就其状况或适用性不作任何保证。`
+    textEn: `I hereby freely assume the inherent risks as well as any other risks not listed that are part of the Activity, and any harm, injury, illness, or loss that may occur to me or my property as a result of my participation in the Activity or during any transportation to or from the Activity—including any injury, illness, or loss caused by the negligence of NACUAA, NACUAA MD, their officers, directors, members, volunteers, agents and contractors, and other Activity participants. I also understand that any equipment that I provide or may borrow or rent from the Organizers or any other provider I use at my own risk, and that any such equipment is provided without any warranty about its condition or suitability.`,
+    textZh: `本人在此自愿承担本活动所包含的固有风险以及未列明的其他风险，并承担因本人参加本活动或往返本活动的交通过程中可能对本人或本人财产造成的任何损害、伤害、疾病或损失——包括因 NACUAA、NACUAA MD、其管理人员、董事、成员、志愿者、代理人及承包商以及其他活动参加者的过失所造成的伤害、疾病或损失。本人亦理解：本人自行提供、向组织方或其他提供方借用或租用的任何设备，均由本人自行承担风险使用，且该等设备就其状况或适用性不作任何保证。`
   },
   {
     num: "3",
     titleEn: "3. RELEASE OF LIABILITY",
     titleZh: "三、责任豁免",
-    textEn: `I hereby RELEASE NACUAA, NACUAA DC, their officers, directors, members, volunteers, agents and contractors, the providers of any equipment used in the Activities, and landowners of the Activity (collectively, the "Released Parties") FROM ALL LIABILITIES, CAUSES OF ACTION, CLAIMS AND DEMANDS that arise in any way from any injury, illness, death, loss or harm that occur to me or to any other person or to any property during the Activity or in any way related to the Activity, including during transportation to or from the Activity. This RELEASE includes claims for the negligence of the Released Parties and claims for strict liability for abnormally dangerous activities. This RELEASE does not extend to claims that California law does not permit to be released by Agreement. I also agree NOT TO SUE or make a claim against the Released Parties for death, injuries, loss or harm that occur during the Activities or are related in any way to the Activities.`,
-    textZh: `本人在此豁免 NACUAA、NACUAA DC、其管理人员、董事、成员、志愿者、代理人及承包商、本活动所用任何设备的提供方以及本活动场地的土地所有者（合称“被豁免方”）就本人、任何其他人或任何财产在本活动期间或与本活动有任何关联（包括往返交通期间）发生的任何伤害、疾病、死亡、损失或损害所产生的全部责任、诉因、请求及主张。本豁免包括针对被豁免方过失的请求，以及针对异常危险活动的严格责任请求。本豁免不适用于加利福尼亚州法律不允许以协议方式豁免的请求。本人并同意，对于在本活动期间发生或与本活动有任何关联的死亡、伤害、损失或损害，不以被豁免方为被告提起诉讼或提出请求。`
+    textEn: `I hereby RELEASE NACUAA, NACUAA MD, their officers, directors, members, volunteers, agents and contractors, the providers of any equipment used in the Activities, and landowners of the Activity (collectively, the "Released Parties") FROM ALL LIABILITIES, CAUSES OF ACTION, CLAIMS AND DEMANDS that arise in any way from any injury, illness, death, loss or harm that occur to me or to any other person or to any property during the Activity or in any way related to the Activity, including during transportation to or from the Activity. This RELEASE includes claims for the negligence of the Released Parties and claims for strict liability for abnormally dangerous activities. This RELEASE does not extend to claims that California law does not permit to be released by Agreement. I also agree NOT TO SUE or make a claim against the Released Parties for death, injuries, loss or harm that occur during the Activities or are related in any way to the Activities.`,
+    textZh: `本人在此豁免 NACUAA、NACUAA MD、其管理人员、董事、成员、志愿者、代理人及承包商、本活动所用任何设备的提供方以及本活动场地的土地所有者（合称“被豁免方”）就本人、任何其他人或任何财产在本活动期间或与本活动有任何关联（包括往返交通期间）发生的任何伤害、疾病、死亡、损失或损害所产生的全部责任、诉因、请求及主张。本豁免包括针对被豁免方过失的请求，以及针对异常危险活动的严格责任请求。本豁免不适用于加利福尼亚州法律不允许以协议方式豁免的请求。本人并同意，对于在本活动期间发生或与本活动有任何关联的死亡、伤害、损失或损害，不以被豁免方为被告提起诉讼或提出请求。`
   },
   {
     num: "4",
@@ -80,8 +80,8 @@ In consideration of the permission to participate in the Activity, I agree to th
     num: "8",
     titleEn: "8. USE OF MY LIKENESS",
     titleZh: "八、肖像及姓名使用",
-    textEn: `I understand that during the Activity I may be photographed or videotaped. To the fullest extent allowed by law, I waive all rights of publicity or privacy or pre-approval that I have for any such likeness of me or use of my name in connection with such likeness, and I grant to NACUAA, NACUAA DC and their assigns permission to copyright, use, and publish (including by electronic means) such likeness of me, whether in whole or part, in any form, without restrictions, and for any purpose.`,
-    textZh: `本人理解，在本活动期间本人可能被拍摄照片或录像。在法律允许的最大范围内，本人放弃就该等本人形象或与该等形象相关的姓名使用所享有的公开权、隐私权或事先审批权，并授权 NACUAA、NACUAA DC 及其受让人以任何形式、不受限制、为任何目的对该等本人形象（全部或部分）享有版权、使用并予以发表（包括以电子方式发表）。`
+    textEn: `I understand that during the Activity I may be photographed or videotaped. To the fullest extent allowed by law, I waive all rights of publicity or privacy or pre-approval that I have for any such likeness of me or use of my name in connection with such likeness, and I grant to NACUAA, NACUAA MD and their assigns permission to copyright, use, and publish (including by electronic means) such likeness of me, whether in whole or part, in any form, without restrictions, and for any purpose.`,
+    textZh: `本人理解，在本活动期间本人可能被拍摄照片或录像。在法律允许的最大范围内，本人放弃就该等本人形象或与该等形象相关的姓名使用所享有的公开权、隐私权或事先审批权，并授权 NACUAA、NACUAA MD 及其受让人以任何形式、不受限制、为任何目的对该等本人形象（全部或部分）享有版权、使用并予以发表（包括以电子方式发表）。`
   },
   {
     num: "9",

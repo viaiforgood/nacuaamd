@@ -61,7 +61,7 @@ export const onRequestGet = async ({ request, env }: { request: Request; env: En
   const headers = new Headers();
   object.writeHttpMetadata(headers);
   headers.set("Content-Type", "application/pdf");
-  headers.set("Content-Disposition", `attachment; filename="NACUAADC_Release_${id}.pdf"`);
+  headers.set("Content-Disposition", `attachment; filename="NACUAAMD_Release_${id}.pdf"`);
 
   return new Response(object.body, { headers });
 };

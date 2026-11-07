@@ -1,8 +1,8 @@
 {
-  "name": "nacuaadc",
+  "name": "nacuaamd",
   "type": "module",
   "version": "0.1.0",
-  "description": "North America Colleges and Universities Alumni Alliance, Washington DC Chapter (NACUAA DC) Website",
+  "description": "North America Colleges and Universities Alumni Alliance, Maryland Chapter (NACUAA MD) Website",
   "engines": {
     "node": ">=18.0.0"
   },

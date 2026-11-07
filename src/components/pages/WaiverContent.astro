@@ -75,7 +75,7 @@ const t = useTranslations(lang);
             {lang === "en" ? "Club / Affiliation" : "所属俱乐部 / 组织机构"} *
           </label>
           <select id="club-select" name="club" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3.5 py-2.5 text-slate-200 focus:outline-none focus:border-blue-500 transition-colors">
-            <option value="general">{lang === "en" ? "NACUAA DC General Activity" : "北美高校联盟华盛顿DC分会 · 综合活动"}</option>
+            <option value="general">{lang === "en" ? "NACUAA MD General Activity" : "北美高校联盟马里兰分会 · 综合活动"}</option>
             <option value="run">健行俱乐部 (Hiking / ChaseWind)</option>
             <option value="guandan">掼蛋俱乐部 (Guandan Club)</option>
             <option value="tennis">网球俱乐部 (Tennis Club)</option>
@@ -185,7 +185,7 @@ const t = useTranslations(lang);
 
         <div class="sm:col-span-2 p-2.5 rounded-xl bg-blue-950/20 border border-blue-900/30 text-blue-300 text-[11px] flex items-center gap-x-2">
           <i class="fa-regular fa-paper-plane"></i>
-          <span>{lang === "en" ? "Upon signing, a signed PDF receipt will be automatically emailed to your email and waiver@dc.nacuaa.ai. You can also download it immediately on your phone." : "签署完成后，系统将自动把 PDF 回执发送至您的邮箱及官方归档邮箱（waiver@dc.nacuaa.ai）；手机端也可当场立即下载/查看。"}</span>
+          <span>{lang === "en" ? "Upon signing, a signed PDF receipt will be automatically emailed to your email and waiver@md.nacuaa.ai. You can also download it immediately on your phone." : "签署完成后，系统将自动把 PDF 回执发送至您的邮箱及官方归档邮箱（waiver@md.nacuaa.ai）；手机端也可当场立即下载/查看。"}</span>
         </div>
       </div>
 
@@ -321,8 +321,8 @@ const t = useTranslations(lang);
         </h3>
         <p class="text-xs text-slate-300 leading-relaxed">
           {lang === "en" 
-            ? "Your Release of Liability has been securely recorded. A PDF certificate has been generated and a copy will be sent to your email and the official waiver archive (waiver@dc.nacuaa.ai)." 
-            : "您的免责声明与责任豁免协议已安全存证。PDF 电子凭证已生成，签署副本已同步发送至您的邮箱及分会官方免责归档邮箱（waiver@dc.nacuaa.ai）。"}
+            ? "Your Release of Liability has been securely recorded. A PDF certificate has been generated and a copy will be sent to your email and the official waiver archive (waiver@md.nacuaa.ai)." 
+            : "您的免责声明与责任豁免协议已安全存证。PDF 电子凭证已生成，签署副本已同步发送至您的邮箱及分会官方免责归档邮箱（waiver@md.nacuaa.ai）。"}
         </p>
       </div>
 
@@ -651,7 +651,7 @@ const t = useTranslations(lang);
             club: effectiveClubCode,
             customClub: customClubName,
             clubName: effectiveClubName,
-            version: "NACUAADC-ROL-2026-09",
+            version: "NACUAAMD-ROL-2026-09",
             pdfBase64
           })
         });
@@ -680,7 +680,7 @@ const t = useTranslations(lang);
     if (generatedPdfBlobUrl) {
       const a = document.createElement("a");
       a.href = generatedPdfBlobUrl;
-      a.download = `NACUAADC_Release_${activityInput.value.trim() || "Waiver"}.pdf`;
+      a.download = `NACUAAMD_Release_${activityInput.value.trim() || "Waiver"}.pdf`;
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);

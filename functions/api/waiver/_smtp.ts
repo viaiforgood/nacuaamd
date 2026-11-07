@@ -190,13 +190,13 @@ export async function sendSmtpEmail(config: SmtpConfig, message: EmailMessage): 
     await session.readResponse([220]);
 
     // 2. EHLO
-    await session.command(`EHLO ${config.heloName || 'dc.nacuaa.ai'}`, [250]);
+    await session.command(`EHLO ${config.heloName || 'md.nacuaa.ai'}`, [250]);
 
     // 3. STARTTLS if on port 587
     if (!isTls && (port === 587 || config.secureTransport === 'starttls')) {
       await session.command('STARTTLS', [220]);
       await session.startTls();
-      await session.command(`EHLO ${config.heloName || 'dc.nacuaa.ai'}`, [250]);
+      await session.command(`EHLO ${config.heloName || 'md.nacuaa.ai'}`, [250]);
     }
 
     // 4. AUTH LOGIN
